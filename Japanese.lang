@@ -5,7 +5,7 @@
 # -- NOTE: The { ... } symbols represent a message block. This is applicable anywhere you want... Do not include any characters with {, or }
 
 ####----> Commands -->
-command.error.wrongUsage({usage})=&c間違った使用法: &8/&7lagg {usage}
+command.error.wrongUsage({usage},{name})=&c間違った使用法: &8/&7lagg {name} {usage}
 command.error.noPermission({name})=&8/&7lagg {name}&cを使用する権限がありません
 command.error.onlyForPlayer()=&cこのコマンドはプレイヤーのみが使用できます！
 
@@ -107,7 +107,7 @@ command.gc.message()=&6[&aClearLag&6] &a&bガベージコレクションをリ�
 
 ##]-> /lagg halt
 command.halt.name()=halt
-command.halt.usage()=
+command.halt.usage()=[on/off]
 command.halt.desc()=(サーバーアクティビティを停止)
 command.halt.halted()=&6[&aClearLag&6] &a&bサーバーのアクティビティが&c停止しました&b！
 command.halt.unhalted()=&6[&aClearLag&6] &a&aサーバーのアクティビティの停止が中断されました！
