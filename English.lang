@@ -5,7 +5,7 @@
 # -- NOTE: The { ... } symbols represent a message block. This is applicable anywhere you want... Do not include any characters with {, or }
 
 ####----> Commands -->
-command.error.wrongUsage({usage})=&cWrong usage: &8/&7lagg {usage}
+command.error.wrongUsage({usage},{name})=&cWrong usage: &8/&7lagg {name} {usage}
 command.error.noPermission({name})=&cYou do not have permission to use &8/&7lagg {name}
 command.error.onlyForPlayer()=&cThis command can only be used by players!
 
@@ -107,7 +107,7 @@ command.gc.message()=&6[&aClearLag&6] &a&bRequesting immediate garbage collectio
 
 ##]-> /lagg halt
 command.halt.name()=halt
-command.halt.usage()=
+command.halt.usage()=[on/off]
 command.halt.desc()=(Halts most server activity)
 command.halt.halted()=&6[&aClearLag&6] &a&bServer activity has been &chalted&b!
 command.halt.unhalted()=&6[&aClearLag&6] &a&aServer activity is no longer halted!
