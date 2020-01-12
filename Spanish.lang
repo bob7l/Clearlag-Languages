@@ -5,13 +5,13 @@
 # -- NOTE: The { ... } symbols represent a message block. This is applicable anywhere you want... Do not include any characters with {, or }
 
 ####----> Commands -->
-command.error.wrongUsage({usage})=&cUso incorrecto: &8/&7lagg {usage}
+command.error.wrongUsage({usage},{name})=&cUso incorrecto: &8/&7lagg {name} {usage}
 command.error.noPermission({name})=&cNo tienes permisos para usar &8/&7lagg {name}
 command.error.onlyForPlayer()=&cEste comando solo es para jugadores!
 
 ##]-> /lagg
 command.lagg.nopermission()=&cNo tienes permisos para usar este comando!
-command.lagg.header()=&3-------------(&b&lTus comandos de Clearlag&3)-------------
+command.lagg.header()=&3------------(&b&lTus comandos de Clearlag&3)------------
 command.lagg.footer()=&3----------------------------------------------------
 command.lagg.helpline({name},{desc})= &4- &8/&3lagg &b{name} &f -  {desc}
 
@@ -107,7 +107,7 @@ command.gc.message()=&6[&aClearLag&6] &a&bPidiendo recolección de basura! &7(Ad
 
 ##]-> /lagg halt
 command.halt.name()=halt
-command.halt.usage()=
+command.halt.usage()=[on/off]
 command.halt.desc()=(Detiene parte de la actividad del servidor)
 command.halt.halted()=&6[&aClearLag&6] &a&bActividad del servidor &cdetenida&b!
 command.halt.unhalted()=&6[&aClearLag&6] &a&aLa actiidad del servidor ya no está detenida!
