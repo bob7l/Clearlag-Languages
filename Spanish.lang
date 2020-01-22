@@ -1,6 +1,6 @@
 # version(1)
-# Welcome to Clearlag's language file! Here you can modify the various strings ClearLag uses to suit your language, or preference
-# -- NOTE: This is the format: '<key>({replaceables}...):<message>'
+# Bienvenido al archivo de idioma de Clearlag! Here you can modify the various strings ClearLag uses to suit your language, or preference
+# -- NOTE: Este es el formato: '<key>({replaceables}...):<message>'
 # -- NOTE: The replaceables are replaced depending on order, not the actual key name. So you may customize the key names too!
 # -- NOTE: The { ... } symbols represent a message block. This is applicable anywhere you want... Do not include any characters with {, or }
 
@@ -17,29 +17,29 @@ command.lagg.helpline({name},{desc})= &4- &8/&3lagg &b{name} &f -  {desc}
 
 ##]-> /lagg admin
 command.admin.name()=admin
-command.admin.desc()=(Controlar modulos de Clearla)
+command.admin.desc()=(Controlar modulos de Clearlag)
 command.admin.usage()=
 command.admin.enabledModules({moduleList})=&aMódulos recargables activados: &7{moduleList}
-command.admin.noReloadableFields({module})={module} &cdoes not contain any reloadable fields!
+command.admin.noReloadableFields({module})={module} &cno contiene ningún campo recargable!
 command.admin.notEnabled({module})=&cEste módulo no está activado!
 command.admin.reload({module})=&aEl módulo {module} ha sido recargado!
 command.admin.failedReload({module})=&cError al recargar módulo {module}
 command.admin.invalidModule({argument})=&cMódulo inválido: {argument}
 command.admin.enabledModules({modules})=&aMódulos activados: &7{modules}
 command.admin.stoppedModule({module})=&aEl módulo {module} ha sido &cdetenido&a!
-command.admin.startableModules({modules})=&aStart-able Modules: &7{modules}
-command.admin.alreadyEnabled({module})=&cEste módulo ya se encuentra activado?
-command.admin.enabled({module})=&aModule {module} has been enabled!
+command.admin.startableModules({modules})=&aMódulos capazes de iniciarse: &7{modules}
+command.admin.alreadyEnabled({module})=&cEste módulo ya se encuentra activado!
+command.admin.enabled({module})=&aMódulo {module} ha sido activado!
 command.admin.moduleStatus({listeners},{commands},{tasks},{modules})={
 &3=--------------[&6-&3] &b&lEstado del Modulo &3[&6-&3]----------------=
               &8[&7Gris = Desactivado&8]   &8[&aVerde = Activado&8]
-&6Listeners: {commands}
+&6Oyentes: {commands}
 &6Comandos: {commands}
 &6Tareas: {tasks}
 &6Módulos: {modules}
 }
 command.admin.help()={
-&3=-------------[&6-&3] &b&lComandos de Módulo &3[&6-&3]---------------=
+&3=-------------[&6-&3] &b&lComandos de Módulos &3[&6-&3]---------------=
 &4  - &3/lagg admin &creload &b<module>
 &4  - &3/lagg admin &cstop &b<module>
 &4  - &3/lagg admin &cstart &b<module>
@@ -50,9 +50,9 @@ command.admin.help()={
 ##]-> /lagg area
 command.area.name()=area
 command.area.usage()=<radius>
-command.area.desc()=(Elimina las entidades en un radio)
-command.area.error({arg})=&4Argumento especificado inválido&8: &c{arg}
-command.area.message({removed},{radius})=&6[&aClearLag&6] &3{removed} &bEntidades removidas en un radio de &3{radius}&b!
+command.area.desc()=(Elimina las entidades en un radio especificado)
+command.area.error({arg})=&4El argumento especificado es inválido&8: &c{arg}
+command.area.message({removed},{radius})=&6[&aClearLag&6] &3{removed} &bEntidades eliminadas en un radio de &3{radius}&b!
 
 ##]-> /lagg checkchunk
 command.checkchunk.name()=checkchunk
@@ -89,7 +89,7 @@ command.check.footer()=&4*&3&m                                                  
 ##]-> /lagg chunk
 command.chunk.name()=chunk
 command.chunk.usage()=[list-size]
-command.chunk.desc()=(Finds laggy chunks)
+command.chunk.desc()=(Encontrar laggy chunks)
 command.chunk.header()=&7&m                           &7( &bChunks más Grandes &7)&m                           "
 command.chunk.print({order},{world},{x},{z},{count})=&4{order}&7) &3World: &b{world}  &3x: &b{x}  &3z: &b{z}  &3Entidades: &b{count}
 
@@ -109,8 +109,8 @@ command.gc.message()=&6[&aClearLag&6] &a&bPidiendo recolección de basura! &7(Ad
 command.halt.name()=halt
 command.halt.usage()=[on/off]
 command.halt.desc()=(Detiene parte de la actividad del servidor)
-command.halt.halted()=&6[&aClearLag&6] &a&bActividad del servidor &cdetenida&b!
-command.halt.unhalted()=&6[&aClearLag&6] &a&aLa actiidad del servidor ya no está detenida!
+command.halt.halted()=&6[&aClearLag&6] &a&bActividad del servidor &calterada&b!
+command.halt.unhalted()=&6[&aClearLag&6] &a&aLa actividad del servidor ya no está alterada!
 
 ##]-> /lagg killmobs
 command.killmobs.name()=killmobs
@@ -169,11 +169,11 @@ command.sampleticks.start({threadname},{time})=&aSe ha comenzado una muestra com
 command.sampleticks.rawheader()=&cRaw tick-timings: &7(Un tick normal está entre los 0-50ms en tiempo)
 command.sampleticks.rawprint({time})=&8 - {time}
 command.sampleticks.print({large},{small},{average},{spikes})={
-&aTick-Stats: &7(Normal tick is between 0-50ms in time)
-&3   Largest-tick: {large}
-&3   Smallest-tick: {small}
-&3   Average-tick: {average}
-&3   Spikes: {spikes}
+&aTick-Stats: &7(Normal tick esta entre 0-50ms en tiempo)
+&3   Tick más largo: {large}
+&3   Tick más corto: {small}
+&3   Promedio de ticks: {average}
+&3   Puntas: {spikes}
 }
 
 ##]-> /lagg tpchunk
@@ -183,13 +183,13 @@ command.tpchunk.desc()=(Teletransportar a los chunks)
 command.tpchunk.begin()=&6[&aClearLag&6] &bIntentando recargar modulos...
 command.tpchunk.successful()=&6[&aClearLag&6] &bLos modulos se han recargado!
 command.tpchunk.invalidinteger({arg})=&4Cantidad inválida especificada&8: &c{arg}
-command.tpchunk.invalidworld({arg})=&4El mundo no existe&8: &c{arg}
+command.tpchunk.invalidworld({arg})=&4El mundo especificado no existe&8: &c{arg}
 command.tpchunk.teleported({x},{z})=&6[&aClearLag&6] &bTeletransportado al chunk: &3{x}&7, &3{z}
 
 ##]-> /lagg tps
 command.tps.name()=tps
 command.tps.usage()=
-command.tps.desc()=(Muestra el promedio ded ticks del servidor)
+command.tps.desc()=(Muestra el promedio de ticks del servidor)
 command.tps.print({tps})=&6[&aClearLag&6] &a{tps}
 
 ##]-> /lagg unloadchunks
