@@ -157,7 +157,7 @@ command.samplememory.gc({total},{highest},{lowest},{averagetime},{averageticks})
 &3   TIempo Más Alto del Recolector de Basura: &b{highest}
 &3   Tiempo Más Bajo del Recolector de Basura: &b{lowest}
 &3   Promedio de Tiempo del Recolector de Basura: &b{averagetime}
-&3   Promedio de Ticks Entre Recolecciones:&b{averageticks}
+&3   Promedio de Ticks Entre Recolecciones: &b{averageticks}
 }
 command.samplememory.notenoughtime()=&cNo es tiempo suficiente para una muestra de ticks para los resultados del recolector de basura (GC)
 
