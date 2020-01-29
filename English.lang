@@ -157,7 +157,7 @@ command.samplememory.gc({total},{highest},{lowest},{averagetime},{averageticks})
 &3   Highest Garbage Collector time: &b{highest}
 &3   Lowest Garbage Collector time: &b{lowest}
 &3   Average Garbage Collector time: &b{averagetime}
-&3   Average Ticks Between Collections:&b{averageticks}
+&3   Average Ticks Between Collections: &b{averageticks}
 }
 command.samplememory.notenoughtime()=&cNot a long enough sample-time for garbage collector results
 
