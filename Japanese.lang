@@ -157,7 +157,7 @@ command.samplememory.gc({total},{highest},{lowest},{averagetime},{averageticks})
 &3   ガベージコレクタの最大時間: &b{highest}
 &3   ガベージコレクタの最小時間: &b{lowest}
 &3   ガベージコレクタの平均時間: &b{averagetime}
-&3   コレクション間の平均tick:&b{averageticks}
+&3   コレクション間の平均tick: &b{averageticks}
 }
 command.samplememory.notenoughtime()=&cガベージコレクタの結果に十分な長さのサンプルタイムがありません
 
