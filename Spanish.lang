@@ -1,4 +1,4 @@
-# version(1)
+# version(1) - Contributor: https://github.com/Zegameus
 # Bienvenido al archivo de idioma de Clearlag! Here you can modify the various strings ClearLag uses to suit your language, or preference
 # -- NOTE: Este es el formato: '<key>({replaceables}...):<message>'
 # -- NOTE: The replaceables are replaced depending on order, not the actual key name. So you may customize the key names too!
