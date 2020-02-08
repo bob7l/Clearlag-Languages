@@ -109,7 +109,7 @@ command.gc.message()=&6[&aClearLag&6] &a&b正在请求立刻回收垃圾！ &7(�
 command.halt.name()=halt
 command.halt.usage()=[on/off]
 command.halt.desc()=(停止大多数服务器活动)
-command.halt.halted()=&6[&aClearLag&6] &a&b已要求服务器活动&停止&b！
+command.halt.halted()=&6[&aClearLag&6] &a&b已要求服务器活动停止！
 command.halt.unhalted()=&6[&aClearLag&6] &a&a已恢复服务器活动！
 
 ##]-> /lagg killmobs
