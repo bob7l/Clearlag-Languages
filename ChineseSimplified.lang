@@ -142,9 +142,9 @@ command.reload.successful()=&6[&aClearLag&6] &b模块已重新载入！
 ##]-> /lagg samplememory
 command.samplememory.name()=samplememory
 command.samplememory.usage()=<sample-seconds>
-command.samplememory.desc()=(样本内存/GC 使用情况)
+command.samplememory.desc()=(统计内存/GC 使用情况)
 command.samplememory.invalidinteger({arg})=&4指定了无效的数字（整数）&8: &c{arg}
-command.samplememory.begin({time})=&a运行内存样本器，时长 &7{time} &a秒
+command.samplememory.begin({time})=&a运行内存统计器，时长 &7{time} &a秒
 command.samplememory.header()=&4*&3&m                       &8(&a&l内存刻（Tick）状态&8)&3&m                        &4*
 command.samplememory.memory({high},{average})={
 &a内存 (以 MB 计算):
@@ -159,13 +159,13 @@ command.samplememory.gc({total},{highest},{lowest},{averagetime},{averageticks})
 &3   垃圾回收平均用时： &b{averagetime}
 &3   两次回收之间平均经过： &b{averageticks} &3Tick
 }
-command.samplememory.notenoughtime()=&c指定的样本时间未达到垃圾回收器的最短要求
+command.samplememory.notenoughtime()=&c指定的采样时间未达到触发垃圾回收器的最短要求
 
 ##]-> /lagg sampleticks
 command.sampleticks.name()=sampleticks
 command.sampleticks.usage()=[ticksToSample] [raw/stats]
 command.sampleticks.desc()=(保留服务器的Tick样本)
-command.sampleticks.start({threadname},{time})=&a在线程 &7{threadname} &a上开展全Tick样本，时间 &7{time} &aTick &7(估算, 并非绝对精确)
+command.sampleticks.start({threadname},{time})=&a在线程 &7{threadname} &a上进行完整Tick统计，时间 &7{time} &aTick &7(估算, 并非绝对精确)
 command.sampleticks.rawheader()=&c原始Tick时间： &7(正常Tick应在0到50毫秒之间)
 command.sampleticks.rawprint({time})=&8 - {time}
 command.sampleticks.print({large},{small},{average},{spikes})={
