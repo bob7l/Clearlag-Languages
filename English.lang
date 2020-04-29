@@ -73,7 +73,7 @@ command.check.header()=&4*&3&m                          &8(&a&lServer Status&8)&
 command.check.printed({removed1},{mobs},{animals},{players},{chunks},{activehoppers},{inactivehoppers},{spawners},{uptime},{tps},{usedmemory},{maxmemory},{freememory})={
 &3   Items on the ground: &b{removed1}
 &3   Mobs alive: &b{mobs}
-&3   Frienly-Mobs alive: &b{animals}
+&3   Friendly-Mobs alive: &b{animals}
 &3   Players alive: &b{players}
 &3   Chunks loaded: &b{chunks}
 &3   Active hoppers: &b{activehoppers}
