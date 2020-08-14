@@ -193,3 +193,10 @@ command.unloadchunks.name()=unloadchunks
 command.unloadchunks.usage()=
 command.unloadchunks.desc()=(Unloads unused chunks)
 command.unloadchunks.print({chunks})=&6[&aClearLag&6] &3{chunks} &bchunks have been unloaded!
+
+##]-> /lagg memory
+command.memory.name()=memory
+command.memory.usage()=[tick-rate]
+command.memory.desc()=(View Heap info)
+command.memory.message()=&3Started JVM heap sampling on the listed memory pools
+command.memory.invalidinteger({arg})=&4Invalid poll-rate specified&8: &c{arg}
