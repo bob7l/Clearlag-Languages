@@ -5,8 +5,8 @@
 # - NOTA: Os símbolos { ... } representam um bloco de mensagem. Isso é aplicável em qualquer lugar que você quiser ... Não inclua nenhum caractere com {, ou }
 
 ####----> Comandos -->
-command.error.wrongUsage({usage},{name})=&cUso incorreto: &8/&7lagg {nome} {uso}
-command.error.noPermission({name})=&cVocê não tem permissão para usar &8/&7lagg {nome}
+command.error.wrongUsage({usage},{name})=&cUso incorreto: &8/&7lagg {name} {usage}
+command.error.noPermission({name})=&cVocê não tem permissão para usar &8/&7lagg {name}
 command.error.onlyForPlayer()=&cEste comando só pode ser usado por jogadores!
 
 ##]-> /lagg
