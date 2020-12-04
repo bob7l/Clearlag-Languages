@@ -13,7 +13,7 @@ command.error.onlyForPlayer()=&cEste comando só pode ser usado por jogadores!
 command.lagg.nopermission()=&cVocê não tem permissão para usar este comando!
 command.lagg.header()=&3-------------(&b&lSeus Comandos do ClearLag&3)-------------
 command.lagg.footer()=&3----------------------------------------------------
-command.lagg.helpline({name},{desc})= &4- &8/&3lagg &b{nome} &f -  {descrição}
+command.lagg.helpline({name},{desc})= &4- &8/&3lagg &b{name} &f -  {desc}
 
 ##]-> /lagg admin
 command.admin.name()=admin
