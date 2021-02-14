@@ -1,0 +1,214 @@
+# version(1)
+# Oversættelse lavet af Jan Christiansen | Vayznex | https://www.spigotmc.org/members/vayznex.458397
+# Velkommen til Clearlag's sprog fil! Her kan du redigere forskellige strenge ClearLag bruger til at tilpasse dit sprog, eller præference
+# -- NOTE: Dette er formatet: '<nøgle>({udskiftelig}...):<besked>'
+# -- NOTE: Det udskiftelige er udskiftet afhængigt af rækkefølgen, ikke på baggrund af selve nøgle navnet. Så du kan også tilpasse nøgle navnet!
+# -- NOTE: { ... } symbolerne repræsenterer en besked-kasse. Denne kan være gældende hvor du ønsker... Undlad at inkludere karaktere med {, or }
+
+####----> Commands -->
+command.error.wrongUsage({usage},{name})=&cForkert brug: &8/&7lagg {name} {usage}
+command.error.noPermission({name})=&cDu har ikke rettighed til at bruge &8/&7lagg {name}
+command.error.onlyForPlayer()=&cDenne kommando kan kun blive brugt af spillere!
+
+##]-> /lagg
+command.lagg.nopermission()=&cDu har ikke rettighed til at bruge denne kommando!
+command.lagg.header()=&3-------------(&b&lDine Clearlag Kommandoer&3)-------------
+command.lagg.footer()=&3----------------------------------------------------
+command.lagg.helpline({name},{desc})= &4- &8/&3lagg &b{name} &f -  {desc}
+
+##]-> /lagg admin
+command.admin.name()=admin
+command.admin.desc()=(Kontroller Clearlag's moduler)
+command.admin.usage()=
+command.admin.enabledModules({moduleList})=&aAktiverede genindlæselige moduler: &7{moduleList}
+command.admin.noReloadableFields({module})={module} &cdindeholder ingen genindlæselige felter!
+command.admin.notEnabled({module})=&cDette modul er ikke aktiveret!
+command.admin.reload({module})=&aModul {module} er blevet genstartet!
+command.admin.failedReload({module})=&cMislykkedes at genstarte modul {module}
+command.admin.invalidModule({argument})=&cUgyldigt modul: {argument}
+command.admin.enabledModules({modules})=&aAktiverede moduler: &7{modules}
+command.admin.stoppedModule({module})=&aModul {module} er blevet &cstoppet&a!
+command.admin.startableModules({modules})=&aStart-klare moduler: &7{modules}
+command.admin.alreadyEnabled({module})=&cDette modul er allerede aktiveret!
+command.admin.enabled({module})=&aModul {module} er blevet aktiveret!
+command.admin.moduleStatus({listeners},{commands},{tasks},{modules})={
+&3=--------------[&6-&3] &b&lModul Status &3[&6-&3]----------------=
+              &8[&7Grå = Deaktiveret&8]   &8[&aGrøn = Aktiveret&8]
+&6Lyttere: {commands}
+&6Kommandoer: {commands}
+&6Opgaver: {tasks}
+&6Moduler: {modules}
+}
+command.admin.help()={
+&3=-------------[&6-&3] &b&lModul Kommandoer &3[&6-&3]---------------=
+&4  - &3/lagg admin &cgenstart &b<module>
+&4  - &3/lagg admin &cstop &b<module>
+&4  - &3/lagg admin &cstart &b<module>
+&4  - &3/lagg admin &clist
+&3-----------------------------------------------------
+}
+
+##]-> /lagg area
+command.area.name()=område
+command.area.usage()=<radius>
+command.area.desc()=(Fjerner genstande fra din radius)
+command.area.error({arg})=&4Ugyldigt argument specificeret&8: &c{arg}
+command.area.message({removed},{radius})=&6[&aClearLag&6] &3{removed} &bGenstande er blevet fjernet indenfor en radius of &3{radius}&b!
+
+##]-> /lagg checkchunk
+command.checkchunk.name()=checkchunk
+command.checkchunk.usage()=
+command.checkchunk.desc()=(Viser chunksenes genstande)
+command.checkchunk.header()=&4*&3&m                            &8(&a&lChunk Info&8)&3&m                              &4*
+command.checkchunk.tilelist()=&3 Tile Genstande&8:
+command.checkchunk.entitylist()=&3 Genstande&8:
+command.checkchunk.line({count},{type})=   &8- &ax{count} &7{type}
+command.checkchunk.footer()=&4*&3&m                                                                             &4*
+
+##]-> /lagg check
+command.check.name()=tjek
+command.check.usage()=[world1, world2...]
+command.check.desc()=(Tæller genstande i din(e) verden(er))
+command.check.invalidworld({arg})=&4Ugyldig verden specificeret&8: {arg}
+command.check.header()=&4*&3&m                          &8(&a&lServer Status&8)&3&m                           &4*
+command.check.printed({removed1},{mobs},{animals},{players},{chunks},{activehoppers},{inactivehoppers},{spawners},{uptime},{tps},{usedmemory},{maxmemory},{freememory})={
+&3   Ting på jorden: &b{removed1}
+&3   Mobs i live: &b{mobs}
+&3   Venlige-Mobs i live: &b{animals}
+&3   Spiller i live: &b{players}
+&3   Chunks indlæst: &b{chunks}
+&3   Aktive hoppere: &b{activehoppers}
+&3   Hoppere i dvale: &b{inactivehoppers}
+&3   Aktive mob spawners: &b{spawners}
+&3   Oppetid: &b{uptime}
+&3   Nuværende TPS: &b{tps}
+&3   RAM Benyttelse: &b{usedmemory}&7/&b{maxmemory} &7MB
+&3   Fri Hukommelse: &b{freememory} &7MB
+}
+command.check.footer()=&4*&3&m                                                                             &4*
+
+##]-> /lagg chunk
+command.chunk.name()=chunk
+command.chunk.usage()=[list-størrelse]
+command.chunk.desc()=(Finder laggende chunks)
+command.chunk.header()=&7&m                           &7( &bStørste Chunks &7)&m                           "
+command.chunk.print({order},{world},{x},{z},{count})=&4{order}&7) &3Verden: &b{world}  &3x: &b{x}  &3z: &b{z}  &3Genstande: &b{count}
+
+##]-> /lagg clear
+command.clear.name()=slet
+command.clear.usage()=
+command.clear.desc()=(Sletter genstande fra dine verdener)
+command.clear.message({count})=&6[&aClearLag&6] &a&bDu har lige fjernet &3{count}&b genstande!
+
+##]-> /lagg gc
+command.gc.name()=gc
+command.gc.usage()=
+command.gc.desc()=(Anmod om affaldssamler)
+command.gc.message()=&6[&aClearLag&6] &a&bAnmoder omgående affaldssamling! &7(Advarsel: Javas VM vil automatisk, effektivt frigøre hukommelse. Brug kun denne kommando til at fejlfinde eller til at tvinge sletning af store bunker)
+
+##]-> /lagg halt
+command.halt.name()=stands
+command.halt.usage()=[Til/fra]
+command.halt.desc()=(Stander det mest af server aktivitet)
+command.halt.halted()=&6[&aClearLag&6] &a&bServer aktivitet er blevet &cstandset&b!
+command.halt.unhalted()=&6[&aClearLag&6] &a&aServer aktivitet er ikke længere standset!
+
+##]-> /lagg killmobs
+command.killmobs.name()=dræb mobs
+command.killmobs.usage()=
+command.killmobs.desc()=(Fjerner mobs fra dine verdener)
+command.killmobs.message({count})=&6[&aClearLag&6] &a&3{count} &bMobs er blevet fjernet!
+
+##]-> /lagg profile
+command.profile.name()=profil
+command.profile.usage()=<sample-seconds> <sample-type>
+command.profile.desc()=(Profilforsinkede inducerende begivenheder)
+command.profile.invalidtime({arg})=&4Ugyldig prøvetid specificeret&8: &c{arg}
+command.profile.invalidprofiler({arg},{profilers})={
+&4Invalid Profiler Specified&8: &c{arg}
+&cValid Profilers&8: &7{profilers}
+}
+command.profile.nosamples()=&cIngen prøver logget under prøvetiden
+command.profile.header()=&7&m                           &7( &bChunk Prøver &7)&m
+command.profile.line({listing},{world},{x},{z},{samples})=&4{listing}&7) &3Verden: &b{world}&7, &3x: &b{x}&7, &3z: &b{z}   &3Prøve Størrelse: &b{samples}
+command.profile.started({time})=&6[&aClearLag&6] &aProfiler startet, kørt i &7{time} &asekunder
+
+##]-> /lagg reload
+command.reload.name()=genindlæs
+command.reload.usage()=
+command.reload.desc()=(Genindlæser clearlag)
+command.reload.begin()=&6[&aClearLag&6] &bPrøver at genstarte moduler...
+command.reload.successful()=&6[&aClearLag&6] &bModuler er blevet genstartet!
+
+##]-> /lagg samplememory
+command.samplememory.name()=prøvehukommelse
+command.samplememory.usage()=<prøve-sekunder>
+command.samplememory.desc()=(Prøve hukommelse/GC benyttelse)
+command.samplememory.invalidinteger({arg})=&4Ugyldigt heltal er angivet&8: &c{arg}
+command.samplememory.begin({time})=&aKører hukommelses prøver i &7{time} &asekunder
+command.samplememory.header()=&4*&3&m                       &8(&a&lHukommelses Tick Stats&8)&3&m                        &4*
+command.samplememory.memory({high},{average})={
+&aHukommelse (I MB):
+&3   Højest Hukommelse Brug Per-tick: &b{high}
+&3   Gennemsnitlig Hukommelse Brug Per-tick: &b{average}
+}
+command.samplememory.gc({total},{highest},{lowest},{averagetime},{averageticks})={
+&aAffaldssamler (Baseret på ticks, i Millisekunder):
+&3   Total GC kollektion (I Ticks): &b{total}
+&3   Højest Affaldssamler tid: &b{highest}
+&3   Lavest  Affaldssamler tid: &b{lowest}
+&3   Gennemsnitlig  Affaldssamler tid: &b{averagetime}
+&3   Gennemsnitlig Ticks Imellem Kollektioner: &b{averageticks}
+}
+command.samplememory.notenoughtime()=&cIkke lang nok prøvetid for affaldssamler resultater
+
+##]-> /lagg sampleticks
+command.sampleticks.name()=prøveticks
+command.sampleticks.usage()=[ticksTilPrøve] [raw/stats]
+command.sampleticks.desc()=(Tag prøve af din servers ticks)
+command.sampleticks.start({threadname},{time})=&aStartede fuld-tick prøve på tråd &7{threadname} &ai &7{time} &aticks &7(Estimering, ikke 100% præcis)
+command.sampleticks.rawheader()=&cRaw tick-timings: &7(Normal tick is between 0-50ms in time)
+command.sampleticks.rawprint({time})=&8 - {time}
+command.sampleticks.print({large},{small},{average},{spikes})={
+&aTick-Stats: &7(Normal tick ligger imellem 0-50ms i tid)
+&3   Største-tick: {large}
+&3   Mindste-tick: {small}
+&3   Gennemsnitlig-tick: {average}
+&3   Spikes: {spikes}
+}
+
+##]-> /lagg tpchunk
+command.tpchunk.name()=tpchunk
+command.tpchunk.usage()=<x> <z> [verden]
+command.tpchunk.desc()=(Teleport til chunks)
+command.tpchunk.begin()=&6[&aClearLag&6] &bForsøger at genindlæse moduler...
+command.tpchunk.successful()=&6[&aClearLag&6] &bModuler er blevet genindlæst!
+command.tpchunk.invalidinteger({arg})=&4Ugyldig heltal specificeret&8: &c{arg}
+command.tpchunk.invalidworld({arg})=&4Verden eksisterer ikke&8: &c{arg}
+command.tpchunk.teleported({x},{z})=&6[&aClearLag&6] &bTeleporterede til chunk: &3{x}&7, &3{z}
+
+##]-> /lagg tps
+command.tps.name()=tps
+command.tps.usage()=
+command.tps.desc()=(Viser Serverens gennemsnitlige tick-frekvens)
+command.tps.print({tps})=&6[&aClearLag&6] &a{tps}
+
+##]-> /lagg unloadchunks
+command.unloadchunks.name()=aflæschunks
+command.unloadchunks.usage()=
+command.unloadchunks.desc()=(Aflæsser ubrugte chunks)
+command.unloadchunks.print({chunks})=&6[&aClearLag&6] &3{chunks} &bchunks er blevet aflæsset!
+
+##]-> /lagg memory
+command.memory.name()=hukommelse
+command.memory.usage()=[tick-frekvens]
+command.memory.desc()=(Se bunke info)
+command.memory.message()=&3Startede JVM bunke prøvning af de anførte hukommelsespuljer
+command.memory.invalidinteger({arg})=&4Ugyldig afstemningsgrad specificeret&8: &c{arg}
+
+##]-> /lagg performance
+command.performance.name()=Ydelse
+command.performance.usage()=[tick-rate]
+command.performance.desc()=(Se Server Ydelse)
+command.performance.message()=&3Startede tråd prøvning (Mere &1søvn&3 er bedre!)
+command.performance.invalidinteger({arg})=&4Ugyldig afstemningsfrekvens specificeret&8: &c{arg}
