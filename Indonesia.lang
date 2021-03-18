@@ -1,0 +1,213 @@
+# version(1) - Translated by https://github.com/zhycorp
+# Welcome to Clearlag's language file! Here you can modify the various strings ClearLag uses to suit your language, or preference
+# -- NOTE: This is the format: '<key>({replaceables}...):<message>'
+# -- NOTE: The replaceables are replaced depending on order, not the actual key name. So you may customize the key names too!
+# -- NOTE: The { ... } symbols represent a message block. This is applicable anywhere you want... Do not include any characters with {, or }
+
+####----> Commands -->
+command.error.wrongUsage({usage},{name})=&cPenggunaan yang salah: &8/&7lagg {name} {usage}
+command.error.noPermission({name})=&cKamu tidak memiliki izin untuk menggunakan &8/&7lagg {name}
+command.error.onlyForPlayer()=&cPerintah ini hanya dapat digunakan oleh pemain!
+
+##]-> /lagg
+command.lagg.nopermission()=&cKamu tidak memiliki izin untuk menggunakan perintah ini!
+command.lagg.header()=&3-------------(&b&lPerintah Clearlag kamu&3)-------------
+command.lagg.footer()=&3----------------------------------------------------
+command.lagg.helpline({name},{desc})= &4- &8/&3lagg &b{name} &f -  {desc}
+
+##]-> /lagg admin
+command.admin.name()=admin
+command.admin.desc()=(Modul kontrol Clearlag)
+command.admin.usage()=
+command.admin.enabledModules({moduleList})=&aMengaktifkan module yang dapat dimuat ulang: &7{moduleList}
+command.admin.noReloadableFields({module})={module} &cTidak berisi apapun yang dapat dimuat ulang!
+command.admin.notEnabled({module})=&cModul ini tidak diaktifkan!
+command.admin.reload({module})=&aModul {module} telah dimuat ulang!
+command.admin.failedReload({module})=&cGagal untuk memuat ulang modul {module}
+command.admin.invalidModule({argument})=&cTidak dapat menemukan modul: {argument}
+command.admin.enabledModules({modules})=&aModul yang diaktifkan: &7{modules}
+command.admin.stoppedModule({module})=&aModul {module} telah di &chentikan&a!
+command.admin.startableModules({modules})=&aModul yang dapat diaktifkan: &7{modules}
+command.admin.alreadyEnabled({module})=&cModul ini telah diaktifkan dari tadi!
+command.admin.enabled({module})=&aModul {module} telah diaktifkan!
+command.admin.moduleStatus({listeners},{commands},{tasks},{modules})={
+&3=--------------[&6-&3] &b&lStatus Modul &3[&6-&3]----------------=
+              &8[&7Gray = Di non-aktifkan&8]   &8[&aGreen = Diaktifkan&8]
+&6Pendengar: {commands}
+&6Perintah: {commands}
+&6Tugas: {tasks}
+&6Modul: {modules}
+}
+command.admin.help()={
+&3=-------------[&6-&3] &b&lPerintah Modul &3[&6-&3]---------------=
+&4  - &3/lagg admin &creload &b<module>
+&4  - &3/lagg admin &cstop &b<module>
+&4  - &3/lagg admin &cstart &b<module>
+&4  - &3/lagg admin &clist
+&3-----------------------------------------------------
+}
+
+##]-> /lagg area
+command.area.name()=area
+command.area.usage()=<radius>
+command.area.desc()=(Bersihkan entititas dari radius kamu)
+command.area.error({arg})=&4Penggunaan yang salah&8: &c{arg}
+command.area.message({removed},{radius})=&6[&aClearLag&6] &3{removed} &bEntititas telah dihapus di dalam radius &3{radius}&b!
+
+##]-> /lagg checkchunk
+command.checkchunk.name()=checkchunk
+command.checkchunk.usage()=
+command.checkchunk.desc()=(Menampilkan entititas chunk)
+command.checkchunk.header()=&4*&3&m                            &8(&a&lInfo Chunk&8)&3&m                              &4*
+command.checkchunk.tilelist()=&3 Ubin Entititas&8:
+command.checkchunk.entitylist()=&3 Entititas&8:
+command.checkchunk.line({count},{type})=   &8- &ax{count} &7{type}
+command.checkchunk.footer()=&4*&3&m                                                                             &4*
+
+##]-> /lagg check
+command.check.name()=check
+command.check.usage()=[world1, world2...]
+command.check.desc()=(Menghitung jumlah entititas dari semua world kamu)
+command.check.invalidworld({arg})=&4Nama world yang salah&8: {arg}
+command.check.header()=&4*&3&m                          &8(&a&lStatus Server&8)&3&m                           &4*
+command.check.printed({removed1},{mobs},{animals},{players},{chunks},{activehoppers},{inactivehoppers},{spawners},{uptime},{tps},{usedmemory},{maxmemory},{freememory})={
+&3   Barang di tanah: &b{removed1}
+&3   Mob hidup: &b{mobs}
+&3   Friendly-Mob hidup: &b{animals}
+&3   Pemain hidup: &b{players}
+&3   Chunks dimuat: &b{chunks}
+&3   Hopper aktif: &b{activehoppers}
+&3   Hopper diam: &b{inactivehoppers}
+&3   Mob spawer aktif: &b{spawners}
+&3   Uptime: &b{uptime}
+&3   TPS saat ini: &b{tps}
+&3   Penggunaan RAM: &b{usedmemory}&7/&b{maxmemory} &7MB
+&3   Memori bebas: &b{freememory} &7MB
+}
+command.check.footer()=&4*&3&m                                                                             &4*
+
+##]-> /lagg chunk
+command.chunk.name()=chunk
+command.chunk.usage()=[list-size]
+command.chunk.desc()=(Menemukan chunk yang lag)
+command.chunk.header()=&7&m                           &7( &bChunk Terbesar &7)&m                           "
+command.chunk.print({order},{world},{x},{z},{count})=&4{order}&7) &3World: &b{world}  &3x: &b{x}  &3z: &b{z}  &3Entititas: &b{count}
+
+##]-> /lagg clear
+command.clear.name()=clear
+command.clear.usage()=
+command.clear.desc()=(Menghapus entititas dari semua world kamu)
+command.clear.message({count})=&6[&aClearLag&6] &a&bKamu telah menghapus &3{count}&b entititas!
+
+##]-> /lagg gc
+command.gc.name()=gc
+command.gc.usage()=
+command.gc.desc()=(Meminta pengumpul sampah)
+command.gc.message()=&6[&aClearLag&6] &a&bSegera meminta pengumpulan sampah! &7(Peringatan: VM Java secara otomatis akan mengosongkan memori secara efisien. Hanya gunakan perintah ini untuk men-debug atau menghapus tumpukan besar secara paksa)
+
+##]-> /lagg halt
+command.halt.name()=halt
+command.halt.usage()=[on/off]
+command.halt.desc()=(Menghentikan sebagian besar aktivitas server)
+command.halt.halted()=&6[&aClearLag&6] &a&bAktifitas server telah &cdihentikan&b!
+command.halt.unhalted()=&6[&aClearLag&6] &a&aAktivitas server tidak lagi dihentikan!
+
+##]-> /lagg killmobs
+command.killmobs.name()=killmobs
+command.killmobs.usage()=
+command.killmobs.desc()=(Membersihkan mob dari world kamu)
+command.killmobs.message({count})=&6[&aClearLag&6] &a&3{count} &bMob telah dibersihkan!
+
+##]-> /lagg profile
+command.profile.name()=profile
+command.profile.usage()=<sample-seconds> <sample-type>
+command.profile.desc()=(Event termasuk kedalam profil lag)
+command.profile.invalidtime({arg})=&4Waktu sampel yang ditentukan tidak valid&8: &c{arg}
+command.profile.invalidprofiler({arg},{profilers})={
+&4Profiler yang Ditentukan tidak valid&8: &c{arg}
+&cProfiler yang Valid&8: &7{profilers}
+}
+command.profile.nosamples()=&cTidak ada sampel yang dicatat selama waktu sampel
+command.profile.header()=&7&m                           &7( &bSampel Chunk &7)&m
+command.profile.line({listing},{world},{x},{z},{samples})=&4{listing}&7) &3World: &b{world}&7, &3x: &b{x}&7, &3z: &b{z}   &3Ukuran Sampel: &b{samples}
+command.profile.started({time})=&6[&aClearLag&6] &aProfiler dimulai, berjalan selama &7{time} &adetik
+
+##]-> /lagg reload
+command.reload.name()=reload
+command.reload.usage()=
+command.reload.desc()=(Muat ulang Clearlag)
+command.reload.begin()=&6[&aClearLag&6] &bMencoba memuat ulang modul...
+command.reload.successful()=&6[&aClearLag&6] &bModul telah dimuat ulang!
+
+##]-> /lagg samplememory
+command.samplememory.name()=samplememory
+command.samplememory.usage()=<sample-seconds>
+command.samplememory.desc()=(Memori sampel/Penggunaan GC)
+command.samplememory.invalidinteger({arg})=&4Bilangan bulat tidak valid ditentukan&8: &c{arg}
+command.samplememory.begin({time})=&aMenjalankan sampler memori selama &7{time} &adetik
+command.samplememory.header()=&4*&3&m                       &8(&a&lStatus Tick Memori&8)&3&m                        &4*
+command.samplememory.memory({high},{average})={
+&aMemory (In MB):
+&3   Penggunaan Memori Tertinggi Per-tick: &b{high}
+&3   Rata-rata Penggunaan Memori Per-tick: &b{average}
+}
+command.samplememory.gc({total},{highest},{lowest},{averagetime},{averageticks})={
+&aPengumpul Sampah (Berdasarkan tick, dalam Milidetik):
+&3   Total kumpulan sampah (Dengan Tick): &b{total}
+&3   Waktu Pengumpul Sampah Tertinggi: &b{highest}
+&3   Waktu Pengumpul Sampah Terendah: &b{lowest}
+&3   Rata-rata waktu Pengumpul Sampah: &b{averagetime}
+&3   Tick Rata-Rata di Antara Koleksi: &b{averageticks}
+}
+command.samplememory.notenoughtime()=&cWaktu sampel yang tidak cukup lama untuk hasil pengumpul sampah
+
+##]-> /lagg sampleticks
+command.sampleticks.name()=sampleticks
+command.sampleticks.usage()=[ticksToSample] [raw/stats]
+command.sampleticks.desc()=(Sampel tick server kamu)
+command.sampleticks.start({threadname},{time})=&aMemulai pengambilan sampel full-tick pada utas &7{threadname} &auntuk &7{time} &atick &7(Estimasi, bukan 100% tepat)
+command.sampleticks.rawheader()=&cRaw timing-tick: &7(Detik normal antara 0-50ms dalam waktu)
+command.sampleticks.rawprint({time})=&8 - {time}
+command.sampleticks.print({large},{small},{average},{spikes})={
+&aTick-Stats: &7(Detik normal antara 0-50ms dalam waktu)
+&3   Tick terbesar: {large}
+&3   Tick terkecil: {small}
+&3   Tick rata-rata: {average}
+&3   Spike: {spikes}
+}
+
+##]-> /lagg tpchunk
+command.tpchunk.name()=tpchunk
+command.tpchunk.usage()=<x> <z> [world]
+command.tpchunk.desc()=(Teleport ke chunk)
+command.tpchunk.begin()=&6[&aClearLag&6] &bMencoba memuat ulang modul...
+command.tpchunk.successful()=&6[&aClearLag&6] &bModul telah dimuat ulang!
+command.tpchunk.invalidinteger({arg})=&4Bilangan bulat tidak valid ditentukan&8: &c{arg}
+command.tpchunk.invalidworld({arg})=&4World tidak ditemukan&8: &c{arg}
+command.tpchunk.teleported({x},{z})=&6[&aClearLag&6] &bTeleported ke chunk: &3{x}&7, &3{z}
+
+##]-> /lagg tps
+command.tps.name()=tps
+command.tps.usage()=
+command.tps.desc()=(Menampilkan tingkat tick rata-rata server)
+command.tps.print({tps})=&6[&aClearLag&6] &a{tps}
+
+##]-> /lagg unloadchunks
+command.unloadchunks.name()=unloadchunks
+command.unloadchunks.usage()=
+command.unloadchunks.desc()=(Bongkar chunk yang tidak terpakai)
+command.unloadchunks.print({chunks})=&6[&aClearLag&6] &3{chunks} &bchunk telah dibongkar!
+
+##]-> /lagg memory
+command.memory.name()=memory
+command.memory.usage()=[tick-rate]
+command.memory.desc()=(Lihat info Heap)
+command.memory.message()=&3Memulai pengambilan sampel heap JVM di kumpulan memori yang terdaftar
+command.memory.invalidinteger({arg})=&4Poll-rate yang ditentukan tidak valid&8: &c{arg}
+
+##]-> /lagg performance
+command.performance.name()=performance
+command.performance.usage()=[tick-rate]
+command.performance.desc()=(Lihat Kinerja Server)
+command.performance.message()=&3Memulai pengambilan sampel utas (Lebih banyak &1tidur&3 lebih baik!)
+command.performance.invalidinteger({arg})=&4Poll-rate yang ditentukan tidak valid&8: &c{arg}
