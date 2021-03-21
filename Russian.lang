@@ -7,7 +7,7 @@
 ####----> Commands -->
 command.error.wrongUsage({usage},{name})=&cНеправильное использование: &8/&7lagg {name} {usage}
 command.error.noPermission({name})=&cУ вас нет прав использовать &8/&7lagg {name}
-command.error.onlyForPlayer()=&cЭту команду может исполнить только игрок!
+command.error.onlyForPlayer()=&cЭту команду может использовать только игрок!
 
 ##]-> /lagg
 command.lagg.nopermission()=&cУ вас нет прав использовать эту команду!
@@ -31,15 +31,15 @@ command.admin.startableModules({modules})=&aЗапускаемые модули:
 command.admin.alreadyEnabled({module})=&cЭтот модуль уже активирован!
 command.admin.enabled({module})=&Модуль {module} был активирован!
 command.admin.moduleStatus({listeners},{commands},{tasks},{modules})={
-&3=--------------[&6-&3] &b&lModule Status &3[&6-&3]----------------=
-              &8[&7Gray = Disabled&8]   &8[&aGreen = Enabled&8]
-&6Listeners: {commands}
-&6Commands: {commands}
-&6Tasks: {tasks}
-&6Modules: {modules}
+&3=--------------[&6-&3] &b&lСтатус Модулей &3[&6-&3]----------------=
+              &8[&7Серый = Выключен&8]   &8[&aЗеленый = Включен&8]
+&6Слушатели: {commands}
+&6Команды: {commands}
+&6Задачи: {tasks}
+&6Модули: {modules}
 }
 command.admin.help()={
-&3=-------------[&6-&3] &b&lModule Commands &3[&6-&3]---------------=
+&3=-------------[&6-&3] &b&lКоманды Модулей &3[&6-&3]---------------=
 &4  - &3/lagg admin &creload &b<module>
 &4  - &3/lagg admin &cstop &b<module>
 &4  - &3/lagg admin &cstart &b<module>
@@ -50,15 +50,15 @@ command.admin.help()={
 ##]-> /lagg area
 command.area.name()=area
 command.area.usage()=<radius>
-command.area.desc()=(Clears entities from your radius)
-command.area.error({arg})=&4Invalid argument specified&8: &c{arg}
+command.area.desc()=(Очищает сущности в вашем радиусе)
+command.area.error({arg})=&4Указан недействительный аргумент&8: &c{arg}
 command.area.message({removed},{radius})=&6[&aClearLag&6] &3{removed} &bСущности были удалены в радиусе &3{radius}&b!
 
 ##]-> /lagg checkchunk
 command.checkchunk.name()=checkchunk
 command.checkchunk.usage()=
 command.checkchunk.desc()=(Показывает сущности в чанке)
-command.checkchunk.header()=&4*&3&m                            &8(&a&lChunk Info&8)&3&m                              &4*
+command.checkchunk.header()=&4*&3&m                            &8(&a&lИнфо о Чанке&8)&3&m                              &4*
 command.checkchunk.tilelist()=&3 Tile Entities&8:
 command.checkchunk.entitylist()=&3 Сущности&8:
 command.checkchunk.line({count},{type})=   &8- &ax{count} &7{type}
@@ -90,13 +90,13 @@ command.check.footer()=&4*&3&m                                                  
 command.chunk.name()=chunk
 command.chunk.usage()=[list-size]
 command.chunk.desc()=(Ищет лагающие чанки)
-command.chunk.header()=&7&m                           &7( &bСамые больше чанки &7)&m                           "
+command.chunk.header()=&7&m                           &7( &bСамые большие чанки &7)&m                           "
 command.chunk.print({order},{world},{x},{z},{count})=&4{order}&7) &3Мир: &b{world}  &3x: &b{x}  &3z: &b{z}  &3Сущности: &b{count}
 
 ##]-> /lagg clear
 command.clear.name()=clear
 command.clear.usage()=
-command.clear.desc()=(Удаляет сущности из ващего мира)
+command.clear.desc()=(Удаляет сущности из вашего мира)
 command.clear.message({count})=&6[&aClearLag&6] &a&bВы только что удалили &3{count}&b сущностей!
 
 ##]-> /lagg gc
@@ -124,13 +124,13 @@ command.profile.usage()=<sample-seconds> <sample-type>
 command.profile.desc()=(События, вызывающие запаздывание профиля)
 command.profile.invalidtime({arg})=&4Задан неверный сэмпл времени&8: &c{arg}
 command.profile.invalidprofiler({arg},{profilers})={
-&4Invalid Profiler Specified&8: &c{arg}
-&cValid Profilers&8: &7{profilers}
+&4Указан Недействительный Профилировщик&8: &c{arg}
+&cДействительные Профилировщики&8: &7{profilers}
 }
 command.profile.nosamples()=&cНе было записано никаких сэмплов в промежуток времени
 command.profile.header()=&7&m                           &7( &bСэмплы чанков &7)&m
 command.profile.line({listing},{world},{x},{z},{samples})=&4{listing}&7) &Мир: &b{world}&7, &3x: &b{x}&7, &3z: &b{z}   &3SРазмер сэмпла: &b{samples}
-command.profile.started({time})=&6[&aClearLag&6] &aПрофайлер запущен, работает в течении &7{time} &aseconds
+command.profile.started({time})=&6[&aClearLag&6] &aПрофайлер запущен, работает в течении &7{time} &aсекунд
 
 ##]-> /lagg reload
 command.reload.name()=reload
@@ -144,12 +144,12 @@ command.samplememory.name()=samplememory
 command.samplememory.usage()=<sample-seconds>
 command.samplememory.desc()=(Память сэмплов/GC использование)
 command.samplememory.invalidinteger({arg})=&4Задано неверное значение&8: &c{arg}
-command.samplememory.begin({time})=&aСэмплер памяти работае в течении &7{time} &aseconds
-command.samplememory.header()=&4*&3&m                       &8(&a&lMemory Tick Stats&8)&3&m                        &4*
+command.samplememory.begin({time})=&aСэмплер памяти работает в течении &7{time} &aсекунд
+command.samplememory.header()=&4*&3&m                       &8(&a&lСтатистика Тиков Памяти&8)&3&m                        &4*
 command.samplememory.memory({high},{average})={
-&aMemory (In MB):
-&3   Highest Memory Usage Per-tick: &b{high}
-&3   Average Memory Usage Per-tick: &b{average}
+&aПамять (В МБ):
+&3   Наивысшее Использование Памяти за Тик: &b{high}
+&3   Среднее Использование Памяти за Тик: &b{average}
 }
 command.samplememory.gc({total},{highest},{lowest},{averagetime},{averageticks})={
 &aСборщик мусора (Основан на тиках, в миллисекундах):
@@ -164,22 +164,22 @@ command.samplememory.notenoughtime()=&cСлишком мало времени д
 ##]-> /lagg sampleticks
 command.sampleticks.name()=sampleticks
 command.sampleticks.usage()=[ticksToSample] [raw/stats]
-command.sampleticks.desc()=(Sample your server's ticks)
-command.sampleticks.start({threadname},{time})=&aStarted full-tick sampling on thread &7{threadname} &afor &7{time} &aticks &7(Estimation, not 100% exact)
-command.sampleticks.rawheader()=&cRaw tick-timings: &7(Normal tick is between 0-50ms in time)
+command.sampleticks.desc()=(Образец тиков вашего сервера)
+command.sampleticks.start({threadname},{time})=&aЗапущена полная выборка на поток &7{threadname} &aдля &7{time} &aтиков &7(Оценка, не 100% точная информация)
+command.sampleticks.rawheader()=&cСырые Тик-Тайминги: &7(Обычный тик находится между 0 и 50 мс во времени)
 command.sampleticks.rawprint({time})=&8 - {time}
 command.sampleticks.print({large},{small},{average},{spikes})={
-&aTick-Stats: &7(Normal tick is between 0-50ms in time)
-&3   Largest-tick: {large}
-&3   Smallest-tick: {small}
-&3   Average-tick: {average}
-&3   Spikes: {spikes}
+&aTick-Stats: &7(Обычный тик находится между 0 и 50 мс во времени)
+&3   Наибольшик Тик: {large}
+&3   Наименьший Тик: {small}
+&3   Средний Тик: {average}
+&3   Скачки: {spikes}
 }
 
 ##]-> /lagg tpchunk
 command.tpchunk.name()=tpchunk
 command.tpchunk.usage()=<x> <z> [world]
-command.tpchunk.desc()=(Teleport to chunks)
+command.tpchunk.desc()=(Телепортирует в чанк)
 command.tpchunk.begin()=&6[&aClearLag&6] &bПопытка перезапустить модули...
 command.tpchunk.successful()=&6[&aClearLag&6] &bМодули были перезапущены!
 command.tpchunk.invalidinteger({arg})=&4Задано неверное значение&8: &c{arg}
@@ -201,13 +201,13 @@ command.unloadchunks.print({chunks})=&6[&aClearLag&6] &3{chunks} &bчанки б
 ##]-> /lagg memory
 command.memory.name()=memory
 command.memory.usage()=[tick-rate]
-command.memory.desc()=(View Heap info)
-command.memory.message()=&3Started JVM heap sampling on the listed memory pools
-command.memory.invalidinteger({arg})=&4Invalid poll-rate specified&8: &c{arg}
+command.memory.desc()=(Показывает Информацию о Куче)
+command.memory.message()=&3Запущена выборка кучи JVM на перечисленных пулах памяти
+command.memory.invalidinteger({arg})=&4Указан недействительный пул-рейт&8: &c{arg}
 
 ##]-> /lagg performance
 command.performance.name()=performance
 command.performance.usage()=[tick-rate]
-command.performance.desc()=(View Server Performance)
-command.performance.message()=&3Started thread sampling (More &1sleep&3 is better!)
-command.performance.invalidinteger({arg})=&4Invalid poll-rate specified&8: &c{arg}
+command.performance.desc()=(Показывает Производительность Сервера)
+command.performance.message()=&3Запущен поток выборки(Больше &1сна&3 - лучше!)
+command.performance.invalidinteger({arg})=&4Указан недействительный пул-рейт&8: &c{arg}
