@@ -77,27 +77,27 @@ command.check.printed({removed1},{mobs},{animals},{players},{chunks},{activehopp
 &3   活著的玩家: &b{players}
 &3   載入中的區塊: &b{chunks}
 &3   活躍中的漏斗: &b{activehoppers}
-&3   待命中的漏懂: &b{inactivehoppers}
+&3   待命中的漏斗: &b{inactivehoppers}
 &3   活躍中的生怪磚: &b{spawners}
 &3   運作時間: &b{uptime}
-&3   目前每秒回合數: &b{tps}
+&3   目前的 TPS: &b{tps}
 &3   記憶體用量: &b{usedmemory}&7/&b{maxmemory} &7MB
 &3   可用記憶體: &b{freememory} &7MB
 }
 command.check.footer()=&4*&3&m                                                                             &4*
 
 ##]-> /lagg chunk
-command.chunk.name()=chunk
-command.chunk.usage()=[清單數量]
-command.chunk.desc()=(尋找延遲的區塊)
+command.chunk.name()=區塊
+command.chunk.usage()=[清單大小]
+command.chunk.desc()=(尋找造成延遲的區塊)
 command.chunk.header()=&7&m                           &7( &b最大的區塊 &7)&m                           "
-command.chunk.print({order},{world},{x},{z},{count})=&4{order}&7) &3World: &b{world}  &3x: &b{x}  &3z: &b{z}  &3Entities: &b{count}
+command.chunk.print({order},{world},{x},{z},{count})=&4{order}&7) &世界: &b{world}  &3x: &b{x}  &3z: &b{z}  &實體: &b{count}
 
 ##]-> /lagg clear
 command.clear.name()=clear
 command.clear.usage()=
 command.clear.desc()=(從世界中清除實體)
-command.clear.message({count})=&6[&aClearLag&6] &a&bYou just removed &3{count}&b entities!
+command.clear.message({count})=&6[&aClearLag&6] &a&b您移除了 &3{count}&b 個實體！
 
 ##]-> /lagg gc
 command.gc.name()=gc
@@ -145,34 +145,34 @@ command.samplememory.usage()=<取樣時間>
 command.samplememory.desc()=(取樣記憶體用量/回收次數)
 command.samplememory.invalidinteger({arg})=&4指定了無效的整數&8: &c{arg}
 command.samplememory.begin({time})=&a執行取樣器 &7{time} &a秒
-command.samplememory.header()=&4*&3&m                       &8(&a&l記憶體每回合狀態&8)&3&m                        &4*
+command.samplememory.header()=&4*&3&m                       &8(&a&l記憶體每刻狀態&8)&3&m                        &4*
 command.samplememory.memory({high},{average})={
 &a記憶體 (單位為 MB):
-&3   每回合最高記憶體用量: &b{high}
-&3   每回合平均記憶體用量: &b{average}
+&3   每刻最高記憶體用量: &b{high}
+&3   每刻平均記憶體用量: &b{average}
 }
 command.samplememory.gc({total},{highest},{lowest},{averagetime},{averageticks})={
-&a記憶體回收器 (每回合，單位為毫秒):
-&3   總記憶體回收 (每回合): &b{total}
+&a記憶體回收器 (每刻，單位為毫秒):
+&3   總記憶體回收 (每刻): &b{total}
 &3   記憶體回收最長時間: &b{highest}
 &3   記憶體回收最短時間: &b{lowest}
 &3   記憶體回收平均時間: &b{averagetime}
-&3   記憶體回收平均間隔回合數: &b{averageticks}
+&3   記憶體回收平均間隔刻數: &b{averageticks}
 }
 command.samplememory.notenoughtime()=&c取樣時間不夠長，無法產生記憶體回收報告
 
 ##]-> /lagg sampleticks
 command.sampleticks.name()=sampleticks
 command.sampleticks.usage()=[取樣回合數] [raw/stats]
-command.sampleticks.desc()=(取樣伺服器的回合)
-command.sampleticks.start({threadname},{time})=&a開始回合取樣於執行緒 &7{threadname} &a，執行 &7{time} &a個回合 &7(估計值，並非 100% 準確)
-command.sampleticks.rawheader()=&c未處理的回合時間: &7(普通回合時間通常介於 0-50 毫秒之間)
+command.sampleticks.desc()=(取樣伺服器的刻數)
+command.sampleticks.start({threadname},{time})=&a開始刻數取樣於執行緒 &7{threadname} &a，將持續 &7{time} &a 刻 &7(估計值，並非 100% 準確)
+command.sampleticks.rawheader()=&c未處理的刻數: &7(正常刻數通常介於 0-50 毫秒之間)
 command.sampleticks.rawprint({time})=&8 - {time}
 command.sampleticks.print({large},{small},{average},{spikes})={
-&a回合狀態: &7(普通回合時間通常介於 0-50 毫秒之間)
-&3   最長回合時間 {large}
-&3   最短回合時間 {small}
-&3   平均回合時間 {average}
+&a刻數狀態: &7(正常刻數通常介於 0-50 毫秒之間)
+&3   最長刻數 {large}
+&3   最短刻數 {small}
+&3   平均刻數 {average}
 &3   尖峰次數: {spikes}
 }
 
@@ -189,25 +189,25 @@ command.tpchunk.teleported({x},{z})=&6[&aClearLag&6] &b已傳送到區塊: &3{x}
 ##]-> /lagg tps
 command.tps.name()=tps
 command.tps.usage()=
-command.tps.desc()=(顯示伺服器平均每秒回合)
+command.tps.desc()=(顯示伺服器平均每秒刻數)
 command.tps.print({tps})=&6[&aClearLag&6] &a{tps}
 
 ##]-> /lagg unloadchunks
 command.unloadchunks.name()=unloadchunks
 command.unloadchunks.usage()=
 command.unloadchunks.desc()=(卸載未使用的區塊)
-command.unloadchunks.print({chunks})=&6[&aClearLag&6] &b已卸載 &3{chunks} &b個區塊！
+command.unloadchunks.print({chunks})=&6[&aClearLag&6] &b已卸載 &3{chunks} &b 個區塊！
 
 ##]-> /lagg memory
 command.memory.name()=memory
-command.memory.usage()=[tick-rate]
-command.memory.desc()=(View Heap info)
-command.memory.message()=&3Started JVM heap sampling on the listed memory pools
-command.memory.invalidinteger({arg})=&4Invalid poll-rate specified&8: &c{arg}
+command.memory.usage()=[伺服器更新率]
+command.memory.desc()=(檢視 Heap 資訊)
+command.memory.message()=&3開始在列出的記憶池中進行 JVM Heap 取樣
+command.memory.invalidinteger({arg})=&4指定的回報頻率無效&8: &c{arg}
 
 ##]-> /lagg performance
 command.performance.name()=performance
-command.performance.usage()=[tick-rate]
-command.performance.desc()=(View Server Performance)
-command.performance.message()=&3Started thread sampling (More &1sleep&3 is better!)
-command.performance.invalidinteger({arg})=&4Invalid poll-rate specified&8: &c{arg}
+command.performance.usage()=[伺服器更新率]
+command.performance.desc()=(檢視伺服器效能)
+command.performance.message()=&3開始執行執行緒取樣 (&1sleep&3 越多越好！)
+command.performance.invalidinteger({arg})=&4指定的回報頻率無效&8: &c{arg}
