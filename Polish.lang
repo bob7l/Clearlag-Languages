@@ -10,7 +10,7 @@ command.error.noPermission({name})=&cNie masz pozwolenia, użyć &8/&7lagg {name
 command.error.onlyForPlayer()=&cTa komenda może być używana tylko przez graczy!
 
 ##]-> /lagg
-command.lagg.nopermission()=&cNie masz pozwolenia żeby tego użyć command!
+command.lagg.nopermission()=&cNie masz pozwolenia na użycie command!
 command.lagg.header()=&3-------------(&b&lTwoje Komendy Clearlag&3)-------------
 command.lagg.footer()=&3----------------------------------------------------
 command.lagg.helpline({name},{desc})= &4- &8/&3lagg &b{name} &f -  {desc}
@@ -21,7 +21,7 @@ command.admin.desc()=(Kontrola modułów Clearlag)
 command.admin.usage()=
 command.admin.enabledModules({moduleList})=&aWłączone przewadowalne moduły: &7{moduleList}
 command.admin.noReloadableFields({module})={module} &cnie zawiera żadnych przewadowalnych pól!
-command.admin.notEnabled({module})=&cTen moduł nie jest aktywny!
+command.admin.notEnabled({module})=&cTen moduł jest nieaktywny!
 command.admin.reload({module})=&aModuł {module} został przeładowany!
 command.admin.failedReload({module})=&cPrzeładowanie modułu zakończone niepowodzeniem {module}
 command.admin.invalidModule({argument})=&cNieodpowiedni moduł: {argument}
@@ -102,7 +102,7 @@ command.clear.message({count})=&6[&aClearLag&6] &a&bUsunąłeś &3{count}&b byt�
 ##]-> /lagg gc
 command.gc.name()=gc
 command.gc.usage()=
-command.gc.desc()=(Zażądaj zbieracza śmieci)
+command.gc.desc()=(Zażądaj zbieraczem śmieci)
 command.gc.message()=&6[&aClearLag&6] &a&bŻądanie natychmiastowego zbierania śmieci! &7(Ostrzeżenie: Java's VM automatycznie i efektynie czyści pamięć. Używaj tej komendy tylko do debugowania lub do wymuszenia wyczyszczenia dużych stosów)
 
 ##]-> /lagg halt
