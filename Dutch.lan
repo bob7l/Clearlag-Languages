@@ -7,7 +7,7 @@
 ####----> Commands -->
 command.error.wrongUsage({usage},{name})=&cIncorrect Argument: &8/&7lagg {name} {usage}
 command.error.noPermission({name})=&cJe hebt geen permissie voor het gebruiken van &8/&7lagg {name}
-command.error.onlyForPlayer()=&cDit commando alleen gebruikt worden door Spelers!
+command.error.onlyForPlayer()=&cDit commando kan alleen gebruikt worden door Spelers!
 
 ##]-> /lagg
 command.lagg.nopermission()=&cJe hebt geen permissie voor het gebruiken van dit commando!
