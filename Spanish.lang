@@ -201,13 +201,13 @@ command.unloadchunks.print({chunks})=&6[&aClearLag&6] &bse han descargado &3{chu
 ##]-> /lagg memory
 command.memory.name()=memory
 command.memory.usage()=[tick-rate]
-command.memory.desc()=(View Heap info)
-command.memory.message()=&3Started JVM heap sampling on the listed memory pools
-command.memory.invalidinteger({arg})=&4Invalid poll-rate specified&8: &c{arg}
+command.memory.desc()=(Ver información sobre la acumulación)
+command.memory.message()=&3Inició el muestreo de la memoria de JVM en los conjuntos de memoria indicados
+command.memory.invalidinteger({arg})=&4Se ha especificado una tasa de distribución inválida&8: &c{arg}
 
 ##]-> /lagg performance
 command.performance.name()=performance
 command.performance.usage()=[tick-rate]
-command.performance.desc()=(View Server Performance)
-command.performance.message()=&3Started thread sampling (More &1sleep&3 is better!)
-command.performance.invalidinteger({arg})=&4Invalid poll-rate specified&8: &c{arg}
+command.performance.desc()=(Ver rendimiento del servidor)
+command.performance.message()=&3Comenzó el muestreo del hilo (¡Más &1sueño es &3mejor!)
+command.performance.invalidinteger({arg})=&4Se ha especificado una tasa de distribución inválida&8: &c{arg}
