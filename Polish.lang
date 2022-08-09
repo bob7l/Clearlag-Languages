@@ -10,7 +10,7 @@ command.error.noPermission({name})=&cNie masz pozwolenia, użyć &8/&7lagg {name
 command.error.onlyForPlayer()=&cTa komenda może być używana tylko przez graczy!
 
 ##]-> /lagg
-command.lagg.nopermission()=&cNie masz pozwolenia żeby tego użyć command!
+command.lagg.nopermission()=&cNie masz pozwolenia żeby użyć tej komendy!
 command.lagg.header()=&3-------------(&b&lTwoje Komendy Clearlag&3)-------------
 command.lagg.footer()=&3----------------------------------------------------
 command.lagg.helpline({name},{desc})= &4- &8/&3lagg &b{name} &f -  {desc}
