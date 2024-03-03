@@ -6,11 +6,11 @@
 
 ####----> Commands -->
 command.error.wrongUsage({usage},{name})=&cZłe użucie: &8/&7lagg {name} {usage}
-command.error.noPermission({name})=&cNie masz pozwolenia, użyć &8/&7lagg {name}
+command.error.noPermission({name})=&cNie masz pozwolenia, żeby użyć &8/&7lagg {name}
 command.error.onlyForPlayer()=&cTa komenda może być używana tylko przez graczy!
 
 ##]-> /lagg
-command.lagg.nopermission()=&cNie masz pozwolenia żeby tego użyć command!
+command.lagg.nopermission()=&cNie masz pozwolenia, żeby użyć tej komendy!
 command.lagg.header()=&3-------------(&b&lTwoje Komendy Clearlag&3)-------------
 command.lagg.footer()=&3----------------------------------------------------
 command.lagg.helpline({name},{desc})= &4- &8/&3lagg &b{name} &f -  {desc}
@@ -23,20 +23,20 @@ command.admin.enabledModules({moduleList})=&aWłączone przewadowalne moduły: &
 command.admin.noReloadableFields({module})={module} &cnie zawiera żadnych przewadowalnych pól!
 command.admin.notEnabled({module})=&cTen moduł nie jest aktywny!
 command.admin.reload({module})=&aModuł {module} został przeładowany!
-command.admin.failedReload({module})=&cPrzeładowanie modułu zakończone niepowodzeniem {module}
+command.admin.failedReload({module})=&cNiepowodzenie przeładowania modułu: {module}
 command.admin.invalidModule({argument})=&cNieodpowiedni moduł: {argument}
 command.admin.enabledModules({modules})=&aWłączone moduły: &7{modules}
-command.admin.stoppedModule({module})=&aModuł {module} został &cstopped&a!
+command.admin.stoppedModule({module})=&aModuł {module} został &czatrzymany&a!
 command.admin.startableModules({modules})=&aModuły możliwe do włączenia: &7{modules}
 command.admin.alreadyEnabled({module})=&cTen moduł jest już włączony!
 command.admin.enabled({module})=&aModuł {module} został włączony!
 command.admin.moduleStatus({listeners},{commands},{tasks},{modules})={
 &3=--------------[&6-&3] &b&lStatus Modułu &3[&6-&3]----------------=
               &8[&7Szary = Wyłączony&8]   &8[&aZielony = Włączony&8]
-&6Listeners: {commands}
-&6Commands: {commands}
-&6Tasks: {tasks}
-&6Modules: {modules}
+&6Słuchacze: {commands}
+&6Komendy: {commands}
+&6Zadania: {tasks}
+&6Moduły: {modules}
 }
 command.admin.help()={
 &3=-------------[&6-&3] &b&lKomendy Modułów &3[&6-&3]---------------=
@@ -67,7 +67,7 @@ command.checkchunk.footer()=&4*&3&m                                             
 ##]-> /lagg check
 command.check.name()=check
 command.check.usage()=[świat1, świat2...]
-command.check.desc()=(Liczy byty w twoich światach)
+command.check.desc()=(Liczy byty w twoim świecie/światach)
 command.check.invalidworld({arg})=&4Podano niepoprawny świat&8: {arg}
 command.check.header()=&4*&3&m                          &8(&a&lServer Status&8)&3&m                           &4*
 command.check.printed({removed1},{mobs},{animals},{players},{chunks},{activehoppers},{inactivehoppers},{spawners},{uptime},{tps},{usedmemory},{maxmemory},{freememory})={
@@ -75,47 +75,47 @@ command.check.printed({removed1},{mobs},{animals},{players},{chunks},{activehopp
 &3   Żywe stworzenia: &b{mobs}
 &3   Żywe przyjazne stworzenia: &b{animals}
 &3   Żywi gracze: &b{players}
-&3   Załadowane Chunki: &b{chunks}
-&3   Aktywne Leje: &b{activehoppers}
-&3   Nieaktywne Leje: &b{inactivehoppers}
+&3   Załadowane chunki: &b{chunks}
+&3   Aktywne leje: &b{activehoppers}
+&3   Nieaktywne leje: &b{inactivehoppers}
 &3   Aktywne mob-spawnery: &b{spawners}
 &3   Czas pracy: &b{uptime}
 &3   Obecne TPS: &b{tps}
 &3   Użycie RAM: &b{usedmemory}&7/&b{maxmemory} &7MB
-&3   Wolna Pamięć: &b{freememory} &7MB
+&3   Wolna pamięć: &b{freememory} &7MB
 }
 command.check.footer()=&4*&3&m                                                                             &4*
 
 ##]-> /lagg chunk
 command.chunk.name()=chunk
-command.chunk.usage()=[wielkość-listy]
+command.chunk.usage()=[list-size]
 command.chunk.desc()=(Znajduje lagujące chunki)
 command.chunk.header()=&7&m                           &7( &bNajwiększe Chunki &7)&m                           "
-command.chunk.print({order},{world},{x},{z},{count})=&4{order}&7) &3World: &b{world}  &3x: &b{x}  &3z: &b{z}  &3Entities: &b{count}
+command.chunk.print({order},{world},{x},{z},{count})=&4{order}&7) &3Świat: &b{world}  &3x: &b{x}  &3z: &b{z}  &3Byty: &b{count}
 
 ##]-> /lagg clear
 command.clear.name()=clear
 command.clear.usage()=
 command.clear.desc()=(Usuwa byty z twojego świata)
-command.clear.message({count})=&6[&aClearLag&6] &a&bUsunąłeś &3{count}&b bytów!
+command.clear.message({count})=&6[&aClearLag&6] &a&bUsunięto &3{count}&b bytów!
 
 ##]-> /lagg gc
 command.gc.name()=gc
 command.gc.usage()=
 command.gc.desc()=(Zażądaj zbieracza śmieci)
-command.gc.message()=&6[&aClearLag&6] &a&bŻądanie natychmiastowego zbierania śmieci! &7(Ostrzeżenie: Java's VM automatycznie i efektynie czyści pamięć. Używaj tej komendy tylko do debugowania lub do wymuszenia wyczyszczenia dużych stosów)
+command.gc.message()=&6[&aClearLag&6] &a&bŻądanie natychmiastowego zbierania śmieci! &7(Ostrzeżenie: Java VM automatycznie i efektynie czyści pamięć. Używaj tej komendy tylko do debugowania lub do wymuszenia wyczyszczenia dużych stosów)
 
 ##]-> /lagg halt
 command.halt.name()=halt
 command.halt.usage()=[on/off]
 command.halt.desc()=(Zatrzymuję większość aktywności serwera)
-command.halt.halted()=&6[&aClearLag&6] &a&bAktywność serwera została &chalted&b!
+command.halt.halted()=&6[&aClearLag&6] &a&bAktywność serwera została &czatrzymana&b!
 command.halt.unhalted()=&6[&aClearLag&6] &a&aAktywność serwera nie jest już zatrzymana!
 
 ##]-> /lagg killmobs
 command.killmobs.name()=killmobs
 command.killmobs.usage()=
-command.killmobs.desc()=(Czyści stworzenia z twojego świata)
+command.killmobs.desc()=(Usuwa stworzenia z twojego świata)
 command.killmobs.message({count})=&6[&aClearLag&6] &a&3{count} &bStworzenia zostały usunięte!
 
 ##]-> /lagg profile
@@ -129,8 +129,8 @@ command.profile.invalidprofiler({arg},{profilers})={
 }
 command.profile.nosamples()=&cBrak próbek zarejestrowanych w czasie próbkowania
 command.profile.header()=&7&m                           &7( &bPróbki Chunków &7)&m
-command.profile.line({listing},{world},{x},{z},{samples})=&4{listing}&7) &3Świat: &b{world}&7, &3x: &b{x}&7, &3z: &b{z}   &3Wielkość próbi: &b{samples}
-command.profile.started({time})=&6[&aClearLag&6] &aProfiler uruchomiony, włączony przez &7{time} &asekund
+command.profile.line({listing},{world},{x},{z},{samples})=&4{listing}&7) &3Świat: &b{world}&7, &3x: &b{x}&7, &3z: &b{z}   &3Wielkość próbki: &b{samples}
+command.profile.started({time})=&6[&aClearLag&6] &aProfiler uruchomiony, pracuje przez &7{time} &asekund
 
 ##]-> /lagg reload
 command.reload.name()=reload
@@ -152,28 +152,28 @@ command.samplememory.memory({high},{average})={
 &3   Średnie Użycie Pamięci na tick: &b{average}
 }
 command.samplememory.gc({total},{highest},{lowest},{averagetime},{averageticks})={
-&aGarbage Collector (Based on ticks, in Milliseconds):
+&aZbieracz Śmieci (Bazuje na tickach, w Milisekundach):
 &3   Łączna ilość zebrań ZŚ (Na Tick): &b{total}
 &3   Najwyższy czas Zbieracza Śmieci: &b{highest}
 &3   Najniższy czas Zbieracza Śmieci: &b{lowest}
 &3   Średni czas Zbieracza Śmieci: &b{averagetime}
 &3   Średnia ilość ticków pomiędzy zebraniami: &b{averageticks}
 }
-command.samplememory.notenoughtime()=&cNZa mało czasu próbkowania dla wyników Zbieracza Śmieci
+command.samplememory.notenoughtime()=&cNZa mało czasu próbkowania dla wyników zbieracza śmieci
 
 ##]-> /lagg sampleticks
 command.sampleticks.name()=sampleticks
 command.sampleticks.usage()=[ticksToSample] [raw/stats]
 command.sampleticks.desc()=(Próbkuj ticki swojego serwera)
-command.sampleticks.start({threadname},{time})=&aRozpoczęto próbkowanie pełnego ticku w wątku &7{threadname} &afor &7{time} &aticks &7(Przybliżenie, nie jest w 100% dokładne)
-command.sampleticks.rawheader()=&cRaw tick-timings: &7(Normalny tick jest pomiędzy 0-50ms)
+command.sampleticks.start({threadname},{time})=&aRozpoczęto próbkowanie pełnego ticku w wątku &7{threadname} &adla &7{time} &aticków &7(Przybliżenie, nie jest w 100% dokładne)
+command.sampleticks.rawheader()=&cSurowe odczyty ticków: &7(Normalny tick jest pomiędzy 0-50ms)
 command.sampleticks.rawprint({time})=&8 - {time}
 command.sampleticks.print({large},{small},{average},{spikes})={
-&aTick-Stats: &7(Normalny tick jest pomiędzy 0-50ms)
-&3   Largest-tick: {large}
-&3   Smallest-tick: {small}
-&3   Average-tick: {average}
-&3   Spikes: {spikes}
+&aStatystyki Ticków: &7(Normalny tick jest pomiędzy 0-50ms)
+&3   Największy tick: {large}
+&3   Najmniejszy tick: {small}
+&3   Średni tick: {average}
+&3   Skoki: {spikes}
 }
 
 ##]-> /lagg tpchunk
@@ -182,7 +182,7 @@ command.tpchunk.usage()=<x> <z> [world]
 command.tpchunk.desc()=(Teleportuj do chunka)
 command.tpchunk.begin()=&6[&aClearLag&6] &bPróba przeładowania modułów...
 command.tpchunk.successful()=&6[&aClearLag&6] &bModuły zostały przeładowane!
-command.tpchunk.invalidinteger({arg})=&4Invalid integer specified&8: &c{arg}
+command.tpchunk.invalidinteger({arg})=&4Podana nieprawidłowa wartość całkowita&8: &c{arg}
 command.tpchunk.invalidworld({arg})=&4Świat nie istnieje&8: &c{arg}
 command.tpchunk.teleported({x},{z})=&6[&aClearLag&6] &bPrzeteleportowano do chunka: &3{x}&7, &3{z}
 
@@ -202,12 +202,12 @@ command.unloadchunks.print({chunks})=&6[&aClearLag&6] &3{chunks} &bchunki zosta�
 command.memory.name()=memory
 command.memory.usage()=[tick-rate]
 command.memory.desc()=(View Heap info)
-command.memory.message()=&3Started JVM heap sampling on the listed memory pools
-command.memory.invalidinteger({arg})=&4Invalid poll-rate specified&8: &c{arg}
+command.memory.message()=&3Rozpoczęto próbkowanie sterty JVM na wyznaczonych pulach pamięci
+command.memory.invalidinteger({arg})=&4Podana nieprawidłowa częstotliwość próbkowania&8: &c{arg}
 
 ##]-> /lagg performance
 command.performance.name()=performance
 command.performance.usage()=[tick-rate]
-command.performance.desc()=(View Server Performance)
-command.performance.message()=&3Started thread sampling (More &1sleep&3 is better!)
-command.performance.invalidinteger({arg})=&4Invalid poll-rate specified&8: &c{arg}
+command.performance.desc()=(Wyświetl wydajność serwera)
+command.performance.message()=&3Rozpoczęto próbkowanie wątków (Im więcej &1bezczynności&3 tym lepiej!)
+command.performance.invalidinteger({arg})=&4Podana nieprawidłowa częstotliwość próbkowania&8: &c{arg}
